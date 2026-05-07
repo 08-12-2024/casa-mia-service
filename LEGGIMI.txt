@@ -1,0 +1,22 @@
+CASA MIA SERVICE - ARCHIVIO COMPLETO
+
+Questo pacchetto contiene un unico file HTML che raccoglie tutto il lavoro svolto nella chat:
+- nome piattaforma Casa Mia Service
+- design Dubai luxury nero/oro
+- web app demo marketplace
+- ricerca e filtri
+- categorie e professionisti
+- simulazione preventivo
+- GDPR/privacy/sicurezza
+- backend/admin previsti
+- stato reale del progetto
+- istruzioni per tecnico
+- pubblicazione web senza dominio
+- note su APK/IPA e limiti reali
+
+Apri il file:
+CASA_MIA_SERVICE_ARCHIVIO_COMPLETO.html
+
+Stato reale:
+è una demo web completa in unico file, non ancora prodotto reale per clienti veri.
+Per lancio vero servono backend, database, autenticazione, email, pagamenti, documenti legali validati e test sicurezza.
