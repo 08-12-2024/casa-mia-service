@@ -1,34 +1,562 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CasaMia Service</title>
-<meta name="description" content="CasaMia Service - Ristrutturiamo, valorizziamo la tua casa.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CASAMIA Service</title>
+
 <style>
-:root{--navy:#06233f;--navy2:#0a3158;--navy3:#03182c;--gold:#c89b55;--gold2:#d8b16c;--cream:#f7f3ee;--text:#0f2742;--muted:#64748b;--shadow:0 22px 60px rgba(6,35,63,.18)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff}a{text-decoration:none;color:inherit}.container{width:min(1180px,calc(100% - 32px));margin:auto}
-header{background:linear-gradient(135deg,var(--navy3),var(--navy));color:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(216,177,108,.25)}
-.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:900}.mark{width:48px;height:48px;border:3px solid var(--gold);border-radius:10px 10px 2px 2px;position:relative}.mark:before{content:"";position:absolute;width:21px;height:25px;border:3px solid var(--gold);border-bottom:0;left:10px;bottom:0}.brand-title{font-size:24px;line-height:1}.brand-title b{color:var(--gold2)}.brand-sub{font-size:12px;letter-spacing:4px;margin-top:4px}nav{display:flex;gap:26px;font-size:13px;font-weight:800;text-transform:uppercase}nav a:hover{color:var(--gold2)}.cta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;padding:14px 22px;border-radius:6px;font-weight:900;box-shadow:0 14px 30px rgba(200,155,85,.28);display:inline-block}
-.hero{background:linear-gradient(90deg,rgba(3,24,44,.98),rgba(6,35,63,.94) 48%,rgba(6,35,63,.35)),url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80");background-size:cover;background-position:center;color:#fff;padding:78px 0 34px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px}.hero h1{font-size:58px;line-height:1.05;margin:0;text-transform:uppercase;letter-spacing:-2px;font-weight:950}.hero h1 span{color:var(--gold2)}.hero p{font-size:22px;line-height:1.45;max-width:520px;margin:18px 0 34px}.quick-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:650px;margin-bottom:34px}.quick{text-align:center;color:#fff}.quick-icon{width:58px;height:58px;border:2px solid var(--gold);border-radius:18px;display:grid;place-items:center;margin:0 auto 10px;font-size:26px;color:var(--gold2)}.quick b{font-size:16px;line-height:1.2}
-.phone{background:#fff;border-radius:28px;box-shadow:var(--shadow);overflow:hidden;color:var(--text)}.chat-top{text-align:center;background:#f3f0ec;color:#666;font-weight:800;padding:18px}.chat{padding:28px 26px;min-height:540px}.row{display:flex;gap:14px;margin:20px 0;align-items:flex-start}.row.user{justify-content:flex-end}.avatar{width:42px;height:42px;border-radius:50%;background:var(--navy);color:var(--gold2);display:grid;place-items:center;font-weight:900}.bubble{max-width:70%;padding:18px 22px;border-radius:18px;line-height:1.45;font-size:16px;box-shadow:0 12px 30px rgba(0,0,0,.06)}.bot{background:#f4f0eb;border-top-left-radius:4px}.userb{background:var(--navy);color:#fff;border-bottom-right-radius:4px}.time{font-size:12px;color:#aaa;margin-top:6px}.inputbar{display:flex;gap:12px;align-items:center;border-top:1px solid #eee;padding:18px}.fake-input{flex:1;border:1px solid #e5e7eb;border-radius:999px;padding:16px 20px;color:#aaa}.send{width:54px;height:54px;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;font-size:22px;font-weight:900}
-.side{background:#fff;color:var(--text);box-shadow:var(--shadow);overflow:hidden}.logo-block{text-align:center;padding:54px 35px}.big-logo{width:92px;height:92px;border:7px solid var(--navy);border-radius:18px 18px 2px 2px;margin:0 auto 24px;position:relative}.big-logo:before{content:"";position:absolute;width:38px;height:44px;border:7px solid var(--gold);border-bottom:0;left:20px;bottom:0}.logo-block h2{margin:0;font-size:44px;letter-spacing:-2px;color:var(--navy)}.logo-block h2 span{color:var(--gold)}.service{letter-spacing:9px;margin-top:4px;font-size:20px;color:var(--navy)}.logo-block p{text-transform:uppercase;font-weight:800;line-height:1.5;margin-top:28px}.gold-line{width:46px;height:3px;background:var(--gold);margin:18px 0}
-.right-text{background:linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.84)),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80");background-size:cover;padding:40px;min-height:280px}.right-text h3{color:var(--navy);font-size:26px;line-height:1.35;text-transform:uppercase;margin:0}.benefits{background:linear-gradient(135deg,var(--navy3),var(--navy));color:#fff;padding:32px 40px}.benefit{display:flex;align-items:center;gap:18px;margin:22px 0;text-transform:uppercase;font-weight:800;line-height:1.35}.benefit-icon{width:58px;height:58px;border:2px solid var(--gold);color:var(--gold2);border-radius:50%;display:grid;place-items:center;font-size:24px;flex:0 0 auto}.services-side{padding:34px 40px 46px}.services-side h3{text-transform:uppercase;color:var(--navy);font-size:24px;margin:0}.service-icons{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:28px}.service-item{text-align:center;text-transform:uppercase;color:var(--navy);font-size:12px;font-weight:900}.ico{font-size:34px;margin-bottom:8px}
-.cta-band{background:linear-gradient(135deg,var(--navy3),var(--navy));color:#fff;padding:28px 0}.cta-row{display:flex;align-items:center;justify-content:space-between;gap:24px}.cta-title{display:flex;align-items:center;gap:18px}.cta-title .quick-icon{margin:0;border-radius:50%}.cta-title h3{margin:0;text-transform:uppercase;font-size:24px}.cta-title p{margin:4px 0 0;color:#d8e1ec}.features{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #eee;border-bottom:1px solid #eee}.feature{text-align:center;padding:28px 22px;border-right:1px solid #eee}.feature:last-child{border-right:0}.feature-icon{color:var(--gold);font-size:30px;margin-bottom:12px}.feature h4{margin:0;color:var(--navy);font-size:14px;text-transform:uppercase}.feature p{font-size:13px;color:var(--muted)}
-.section{padding:70px 20px}.section-title{text-align:center;color:var(--navy);font-size:38px;margin:0 0 14px;text-transform:uppercase}.section-sub{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 35px;line-height:1.6}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.review{background:#fff;border:1px solid #eee;border-radius:20px;box-shadow:0 14px 34px rgba(6,35,63,.08);padding:28px;text-align:center}.stars{color:var(--gold);font-size:24px;margin-bottom:12px}.review p{color:var(--muted);line-height:1.6}.review b{color:var(--navy)}.map-section{background:#f8f8f8;text-align:center}.map-section p{color:var(--muted)}.map{width:100%;height:360px;border:0;border-radius:22px;box-shadow:0 18px 45px rgba(6,35,63,.12);margin-top:20px}
-footer{background:linear-gradient(135deg,var(--navy3),var(--navy));color:#fff;padding:48px 0 28px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.4fr 1fr;gap:28px}footer h4{text-transform:uppercase;margin:0 0 16px;font-size:14px}footer p,footer a{display:block;color:#d8e1ec;font-size:14px;line-height:1.7;margin:4px 0}.socials{display:flex;gap:12px;margin-top:12px}.social{width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold2);font-weight:900}.copy{margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#c8d4e2;font-size:13px}.whatsapp-fixed{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:16px 20px;border-radius:999px;font-weight:bold;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,0.2);z-index:9999}
-@media(max-width:950px){nav{display:none}.hero-grid{grid-template-columns:1fr}.hero h1{font-size:42px}.quick-actions{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.cta-row{flex-direction:column;align-items:flex-start}.reviews{grid-template-columns:1fr}}
-@media(max-width:560px){.nav-cta{display:none}.hero h1{font-size:34px}.hero p{font-size:17px}.phone{border-radius:22px}.chat{padding:20px 16px}.bubble{max-width:82%;font-size:14px}.side{display:none}.features{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.section-title{font-size:30px}}
+
+:root{
+--navy:#06233f;
+--navy2:#0a3158;
+--navy3:#03182c;
+--gold:#c89b55;
+--gold2:#d8b16c;
+--text:#0f2742;
+--muted:#64748b;
+--shadow:0 22px 60px rgba(6,35,63,.18);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:white;
+color:var(--text);
+}
+
+a{
+text-decoration:none;
+}
+
+header{
+background:linear-gradient(135deg,var(--navy3),var(--navy));
+padding:20px 40px;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+}
+
+.logo{
+font-size:30px;
+font-weight:900;
+color:white;
+}
+
+.logo span{
+color:var(--gold2);
+}
+
+.menu{
+display:flex;
+gap:25px;
+}
+
+.menu a{
+color:white;
+font-weight:bold;
+font-size:14px;
+text-transform:uppercase;
+}
+
+.cta{
+background:linear-gradient(135deg,var(--gold),var(--gold2));
+padding:14px 22px;
+border-radius:8px;
+color:white;
+font-weight:bold;
+}
+
+.hero{
+background:
+linear-gradient(rgba(3,24,44,.85),rgba(3,24,44,.85)),
+url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+padding:100px 20px;
+color:white;
+}
+
+.hero-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.hero h1{
+font-size:64px;
+line-height:1;
+margin-bottom:20px;
+font-weight:900;
+text-transform:uppercase;
+}
+
+.hero h1 span{
+color:var(--gold2);
+}
+
+.hero p{
+font-size:22px;
+line-height:1.5;
+margin-bottom:30px;
+}
+
+.buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 24px;
+border-radius:10px;
+font-weight:bold;
+display:inline-block;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,var(--gold),var(--gold2));
+color:white;
+}
+
+.btn-secondary{
+border:2px solid white;
+color:white;
+}
+
+.chat{
+background:white;
+border-radius:30px;
+padding:30px;
+box-shadow:var(--shadow);
+color:black;
+}
+
+.message{
+margin-bottom:20px;
+}
+
+.bot{
+background:#f2f2f2;
+padding:16px 20px;
+border-radius:18px;
+max-width:80%;
+}
+
+.user{
+background:var(--navy);
+color:white;
+padding:16px 20px;
+border-radius:18px;
+margin-left:auto;
+max-width:80%;
+}
+
+.services{
+padding:80px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+font-size:42px;
+text-align:center;
+margin-bottom:20px;
+color:var(--navy);
+text-transform:uppercase;
+}
+
+.section-sub{
+text-align:center;
+color:var(--muted);
+max-width:700px;
+margin:auto auto 50px;
+line-height:1.6;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+border:1px solid #eee;
+text-align:center;
+}
+
+.card h3{
+margin-top:20px;
+margin-bottom:10px;
+color:var(--navy);
+}
+
+.card-icon{
+font-size:42px;
+color:var(--gold);
+}
+
+.reviews{
+background:#f8f8f8;
+padding:80px 20px;
+}
+
+.review-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.stars{
+font-size:24px;
+color:var(--gold);
+margin-bottom:15px;
+}
+
+.review-card p{
+line-height:1.6;
+margin-bottom:15px;
+color:var(--muted);
+}
+
+.map-section{
+padding:80px 20px;
+text-align:center;
+}
+
+.map{
+width:100%;
+height:400px;
+border:none;
+border-radius:20px;
+margin-top:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+footer{
+background:linear-gradient(135deg,var(--navy3),var(--navy));
+color:white;
+padding:60px 20px 30px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.footer-grid h4{
+margin-bottom:20px;
+color:var(--gold2);
+}
+
+.footer-grid p,
+.footer-grid a{
+color:#d8e1ec;
+margin-bottom:10px;
+display:block;
+line-height:1.6;
+}
+
+.copy{
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.1);
+color:#d8e1ec;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:16px 22px;
+border-radius:999px;
+font-weight:bold;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+z-index:9999;
+}
+
+@media(max-width:900px){
+
+.hero-container{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.menu{
+display:none;
+}
+
+}
+
 </style>
 </head>
+
 <body>
-<header><div class="container nav"><a class="brand" href="#"><span class="mark"></span><span><span class="brand-title">CASA<b>MIA</b></span><span class="brand-sub">SERVICE</span></span></a><nav><a href="#">Home</a><a href="#servizi">Servizi</a><a href="#progetti">I miei progetti</a><a href="#stato">Stato lavori</a><a href="#assistenza">Assistenza</a></nav><a class="cta nav-cta" href="https://wa.me/3908118639483" target="_blank">Richiedi Preventivo</a></div></header>
-<section class="hero"><div class="container hero-grid"><div><h1>Ristrutturiamo,<br><span>valorizziamo</span><br>la tua casa.</h1><p>Un unico interlocutore, tutti i servizi per la tua ristrutturazione.</p><div class="quick-actions"><a class="quick" href="https://wa.me/3908118639483" target="_blank"><div class="quick-icon">☷</div><b>Richiedi<br>preventivo</b></a><a class="quick" href="#progetti"><div class="quick-icon">⌂</div><b>I miei<br>progetti</b></a><a class="quick" href="#stato"><div class="quick-icon">⛑</div><b>Stato<br>lavori</b></a><a class="quick" href="#assistenza"><div class="quick-icon">☏</div><b>Assistenza</b></a></div><div class="phone" id="preventivo"><div class="chat-top">Oggi, 20 Maggio</div><div class="chat"><div class="row"><div class="avatar">⌂</div><div><div class="bubble bot">Ciao! 👋<br>Benvenuto in Casamia Service.<br>Come possiamo aiutarti oggi?</div><div class="time">09:41</div></div></div><div class="row user"><div><div class="bubble userb">Ciao, vorrei ristrutturare il bagno e ho bisogno di un preventivo.</div><div class="time" style="text-align:right">09:42 ✓✓</div></div></div><div class="row"><div class="avatar">⌂</div><div><div class="bubble bot">Perfetto! Per fornirti un preventivo su misura, ti chiediamo alcune informazioni.<br><br><b>Compila il questionario ›</b></div><div class="time">09:43</div></div></div><div class="row user"><div><div class="bubble userb">Compilato! ✅</div><div class="time" style="text-align:right">09:45 ✓✓</div></div></div><div class="row"><div class="avatar">⌂</div><div><div class="bubble bot">Grazie! I nostri tecnici stanno analizzando la tua richiesta.<br>Ti invieremo il preventivo il prima possibile.</div><div class="time">09:46</div></div></div></div><div class="inputbar"><div class="fake-input">Scrivi un messaggio...</div><div class="send">➤</div></div></div></div><aside class="side"><div class="logo-block"><div class="big-logo"></div><h2>CASA<span>MIA</span></h2><div class="service">SERVICE</div><p>Ristrutturiamo,<br>valorizziamo la tua casa.</p><div class="gold-line" style="margin-left:auto;margin-right:auto"></div></div><div class="right-text"><h3>Un unico interlocutore,<br>tutti i servizi<br>per la tua<br>ristrutturazione.</h3><div class="gold-line"></div></div><div class="benefits"><div class="benefit"><div class="benefit-icon">◎</div><div>Professionalità<br>e qualità</div></div><div class="benefit"><div class="benefit-icon">♙</div><div>Un team<br>di esperti</div></div><div class="benefit"><div class="benefit-icon">▦</div><div>Rispetto di<br>tempi e costi</div></div><div class="benefit"><div class="benefit-icon">⌂</div><div>Soluzioni<br>su misura</div></div></div><div class="services-side" id="servizi"><h3>I nostri servizi</h3><div class="gold-line"></div><div class="service-icons"><div class="service-item"><div class="ico">⌂</div>Ristrutturazioni<br>complete</div><div class="service-item"><div class="ico">♨</div>Bagni</div><div class="service-item"><div class="ico">⌙</div>Cucine</div><div class="service-item"><div class="ico">⚡</div>Impianti</div><div class="service-item"><div class="ico">▧</div>Pavimenti e<br>rivestimenti</div><div class="service-item"><div class="ico">▰</div>Tinteggiature</div></div></div></aside></div></section>
-<section class="cta-band"><div class="container cta-row"><div class="cta-title"><div class="quick-icon">☷</div><div><h3>Richiedi ora il tuo preventivo</h3><p>Semplice, veloce e senza impegno.</p></div></div><a class="cta" href="https://wa.me/3908118639483" target="_blank">Contattaci su WhatsApp</a></div></section>
-<section class="features" id="stato"><div class="feature"><div class="feature-icon">◇</div><h4>Sicurezza e garanzia</h4><p>Lavori garantiti e assicurati.</p></div><div class="feature"><div class="feature-icon">✦</div><h4>Materiali di qualità</h4><p>Solo materiali delle migliori marche.</p></div><div class="feature"><div class="feature-icon">☏</div><h4>Assistenza dedicata</h4><p>Sempre al tuo fianco dal primo contatto.</p></div><div class="feature"><div class="feature-icon">♡</div><h4>Soddisfazione garantita</h4><p>La tua soddisfazione è la nostra priorità.</p></div></section>
-<section class="section" id="progetti"><div class="container"><h2 class="section-title">Cosa dicono i nostri clienti</h2><p class="section-sub">La fiducia dei clienti è il nostro primo biglietto da visita.</p><div class="reviews"><div class="review"><div class="stars">★★★★★</div><p>Servizio impeccabile e professionale. Mi hanno seguito dall'inizio alla fine.</p><b>- Marco R.</b></div><div class="review"><div class="stars">★★★★★</div><p>Ristrutturazione bagno perfetta. Tempi rispettati e lavoro pulito.</p><b>- Anna P.</b></div><div class="review"><div class="stars">★★★★★</div><p>Veloci, seri e organizzati. Finalmente un unico referente per tutto.</p><b>- Luigi C.</b></div></div></div></section>
-<section class="section map-section"><div class="container"><h2 class="section-title">Dove siamo</h2><p>Corso Garibaldi 388, 80142 Napoli</p><iframe class="map" src="https://www.google.com/maps?q=Corso+Garibaldi+388+Napoli+80142&output=embed" allowfullscreen="" loading="lazy"></iframe></div></section>
-<footer id="assistenza"><div class="container"><div class="footer-grid"><div><a class="brand" href="#"><span class="mark"></span><span><span class="brand-title">CASA<b>MIA</b></span><span class="brand-sub">SERVICE</span></span></a><p>Ristrutturiamo, valorizziamo la tua casa.</p><div class="socials"><span class="social">f</span><span class="social">◎</span><span class="social">☏</span></div></div><div><h4>Link utili</h4><a href="#">Home</a><a href="#servizi">Servizi</a><a href="#progetti">I miei progetti</a><a href="#stato">Stato lavori</a><a href="#assistenza">Assistenza</a></div><div><h4>Azienda</h4><a>Chi siamo</a><a>I nostri lavori</a><a>Dicono di noi</a><a>Contatti</a><a>Lavora con noi</a></div><div><h4>Contatti</h4><p>☎ 08118639483</p><p>✉ casamiasrl2024@gmail.com</p><p>⌖ Corso Garibaldi 388,<br>80142 Napoli</p><p>P.IVA 10344461214</p></div><div><h4>Seguici</h4><div class="socials"><span class="social">f</span><span class="social">◎</span><span class="social">☏</span></div></div></div><div class="copy"><span>© 2026 CASAMIA Service - Tutti i diritti riservati | Privacy Policy | Cookie Policy</span><span>P.IVA 10344461214</span></div></div></footer>
-<a class="whatsapp-fixed" href="https://wa.me/3908118639483" target="_blank">WhatsApp</a>
+
+<header>
+
+<div class="nav">
+
+<div class="logo">
+CASA<span>MIA</span> SERVICE
+</div>
+
+<div class="menu">
+<a href="#">Home</a>
+<a href="#servizi">Servizi</a>
+<a href="#recensioni">Recensioni</a>
+<a href="#contatti">Contatti</a>
+</div>
+
+<a class="cta" href="https://wa.me/3908118639483" target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div>
+
+<h1>
+Ristrutturiamo,<br>
+<span>valorizziamo</span><br>
+la tua casa.
+</h1>
+
+<p>
+Un unico interlocutore, tutti i servizi per la tua ristrutturazione.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-primary"
+href="https://wa.me/3908118639483"
+target="_blank">
+Richiedi Preventivo
+</a>
+
+<a class="btn btn-secondary"
+href="#servizi">
+Scopri i Servizi
+</a>
+
+</div>
+
+</div>
+
+<div class="chat">
+
+<div class="message">
+<div class="bot">
+Ciao 👋 Benvenuto in CASAMIA Service.
+Come possiamo aiutarti?
+</div>
+</div>
+
+<div class="message">
+<div class="user">
+Vorrei ristrutturare il bagno.
+</div>
+</div>
+
+<div class="message">
+<div class="bot">
+Perfetto! Scrivici su WhatsApp e ricevi subito il tuo preventivo.
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services" id="servizi">
+
+<div class="container">
+
+<h2 class="section-title">
+I nostri servizi
+</h2>
+
+<p class="section-sub">
+Tutti i servizi per valorizzare e ristrutturare la tua casa.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-icon">🏠</div>
+<h3>Ristrutturazioni</h3>
+<p>Ristrutturazioni complete chiavi in mano.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🛁</div>
+<h3>Bagni</h3>
+<p>Bagni moderni e personalizzati.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🍳</div>
+<h3>Cucine</h3>
+<p>Soluzioni cucina eleganti e funzionali.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">⚡</div>
+<h3>Impianti</h3>
+<p>Impianti elettrici e idraulici professionali.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="reviews" id="recensioni">
+
+<div class="container">
+
+<h2 class="section-title">
+Cosa dicono i clienti
+</h2>
+
+<p class="section-sub">
+La soddisfazione dei clienti è la nostra priorità.
+</p>
+
+<div class="cards">
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>
+Servizio impeccabile e professionale.
+</p>
+<b>- Marco R.</b>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>
+Ristrutturazione bagno perfetta.
+</p>
+<b>- Anna P.</b>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>
+Veloci, seri e organizzati.
+</p>
+<b>- Luigi C.</b>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="map-section">
+
+<div class="container">
+
+<h2 class="section-title">
+Dove siamo
+</h2>
+
+<p>
+Corso Garibaldi 388, Napoli 80142
+</p>
+
+<iframe
+class="map"
+src="https://www.google.com/maps?q=Corso+Garibaldi+388+Napoli+80142&output=embed">
+</iframe>
+
+</div>
+
+</section>
+
+<footer id="contatti">
+
+<div class="footer-grid">
+
+<div>
+<h4>CASAMIA Service</h4>
+<p>
+Ristrutturiamo, valorizziamo la tua casa.
+</p>
+</div>
+
+<div>
+<h4>Contatti</h4>
+<p>☎ 08118639483</p>
+<p>✉ casamiasrl2024@gmail.com</p>
+<p>📍 Corso Garibaldi 388, Napoli</p>
+<p>P.IVA 10344461214</p>
+</div>
+
+<div>
+<h4>Link utili</h4>
+<a href="#">Home</a>
+<a href="#servizi">Servizi</a>
+<a href="#recensioni">Recensioni</a>
+</div>
+
+</div>
+
+<div class="copy">
+© 2026 CASAMIA Service - Tutti i diritti riservati
+</div>
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/3908118639483"
+target="_blank">
+WhatsApp
+</a>
+
 </body>
 </html>
