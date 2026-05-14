@@ -9,34 +9,21 @@
 
 <meta name="description" content="CASAMIA Service - Ristrutturiamo, valorizziamo la tua casa.">
 
-<!-- PWA / APP -->
-
 <link rel="manifest" href="/manifest.json">
 
 <meta name="theme-color" content="#06233f">
-
 <meta name="apple-mobile-web-app-capable" content="yes">
-
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
 <meta name="apple-mobile-web-app-title" content="CASAMIA">
-
-<meta name="mobile-web-app-capable" content="yes">
-
-<meta name="application-name" content="CASAMIA Service">
-
-<meta name="format-detection" content="telephone=no">
 
 <style>
 
 :root{
 --navy:#06233f;
---navy3:#03182c;
---gold:#c89b55;
---gold2:#d8b16c;
---text:#0f2742;
---muted:#64748b;
---shadow:0 22px 60px rgba(6,35,63,.18);
+--gold:#d4a64a;
+--light:#ffffff;
+--text:#10233d;
+--shadow:0 15px 40px rgba(0,0,0,.1);
 }
 
 *{
@@ -62,66 +49,50 @@ text-decoration:none;
 .container{
 max-width:1200px;
 margin:auto;
-width:calc(100% - 32px);
+padding:0 20px;
 }
 
 header{
-background:linear-gradient(135deg,var(--navy3),var(--navy));
-padding:20px 40px;
+background:#fff;
+padding:20px 0;
 position:sticky;
 top:0;
 z-index:999;
+box-shadow:0 2px 20px rgba(0,0,0,.05);
 }
 
 .nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-max-width:1200px;
-margin:auto;
-gap:20px;
 }
 
-.logo{
-font-size:30px;
-font-weight:900;
-color:white;
-}
-
-.logo span{
-color:var(--gold2);
+.logo img{
+height:70px;
 }
 
 .menu{
 display:flex;
 gap:25px;
-flex-wrap:wrap;
 }
 
 .menu a{
-color:white;
+color:var(--navy);
 font-weight:bold;
 font-size:14px;
-text-transform:uppercase;
 }
 
 .cta{
-background:linear-gradient(135deg,var(--gold),var(--gold2));
+background:linear-gradient(135deg,var(--navy),#0b3b68);
+color:#fff;
 padding:14px 22px;
-border-radius:8px;
-color:white;
+border-radius:10px;
 font-weight:bold;
-display:inline-block;
 }
 
 .hero{
-background:
-linear-gradient(rgba(3,24,44,.88),rgba(3,24,44,.88)),
-url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
-background-position:center;
 padding:100px 20px;
-color:white;
+background:#fff;
 }
 
 .hero-container{
@@ -129,26 +100,32 @@ max-width:1200px;
 margin:auto;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:40px;
+gap:60px;
 align-items:center;
 }
 
+.hero-left img{
+width:260px;
+margin-bottom:25px;
+}
+
 .hero h1{
-font-size:64px;
+font-size:60px;
 line-height:1;
-margin-bottom:20px;
+color:var(--navy);
+margin-bottom:25px;
 font-weight:900;
-text-transform:uppercase;
 }
 
 .hero h1 span{
-color:var(--gold2);
+color:var(--gold);
 }
 
 .hero p{
 font-size:22px;
-line-height:1.5;
-margin-bottom:30px;
+line-height:1.6;
+margin-bottom:35px;
+color:#516173;
 }
 
 .buttons{
@@ -165,21 +142,22 @@ display:inline-block;
 }
 
 .btn-primary{
-background:linear-gradient(135deg,var(--gold),var(--gold2));
+background:linear-gradient(135deg,var(--navy),#0b3b68);
 color:white;
 }
 
 .btn-secondary{
-border:2px solid white;
-color:white;
+background:#fff;
+border:2px solid var(--navy);
+color:var(--navy);
 }
 
 .chat{
-background:white;
+background:#fff;
+padding:35px;
 border-radius:30px;
-padding:30px;
 box-shadow:var(--shadow);
-color:black;
+border:1px solid #eee;
 }
 
 .message{
@@ -187,7 +165,7 @@ margin-bottom:20px;
 }
 
 .bot{
-background:#f2f2f2;
+background:#f5f5f5;
 padding:16px 20px;
 border-radius:18px;
 max-width:80%;
@@ -203,7 +181,7 @@ max-width:80%;
 }
 
 .section{
-padding:80px 20px;
+padding:90px 20px;
 }
 
 .section-title{
@@ -211,15 +189,14 @@ font-size:42px;
 text-align:center;
 margin-bottom:20px;
 color:var(--navy);
-text-transform:uppercase;
 }
 
 .section-sub{
 text-align:center;
-color:var(--muted);
 max-width:700px;
 margin:auto auto 50px;
-line-height:1.6;
+line-height:1.7;
+color:#617184;
 }
 
 .cards{
@@ -229,27 +206,26 @@ gap:25px;
 }
 
 .card{
-background:white;
-border-radius:20px;
-padding:30px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-border:1px solid #eee;
+background:#fff;
+padding:35px;
+border-radius:24px;
+box-shadow:var(--shadow);
 text-align:center;
-}
-
-.card h3{
-margin-top:20px;
-margin-bottom:10px;
-color:var(--navy);
+border:1px solid #eee;
 }
 
 .card-icon{
 font-size:42px;
-color:var(--gold);
+margin-bottom:20px;
+}
+
+.card h3{
+margin-bottom:12px;
+color:var(--navy);
 }
 
 .form-section{
-background:#f8f8f8;
+background:#f8f9fb;
 }
 
 .form-box{
@@ -267,93 +243,89 @@ padding:18px;
 border-radius:12px;
 border:1px solid #ddd;
 font-size:16px;
-font-family:Arial,Helvetica,sans-serif;
 }
 
 .reviews{
-background:#f8f8f8;
+background:#fff;
 }
 
 .review-card{
-background:white;
+background:#fff;
 padding:30px;
 border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+box-shadow:var(--shadow);
 }
 
 .stars{
-font-size:24px;
 color:var(--gold);
+font-size:24px;
 margin-bottom:15px;
 }
 
-.collab-section{
-background:
-linear-gradient(rgba(3,24,44,.92),rgba(3,24,44,.92)),
-url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
-background-position:center;
+.collab{
+background:linear-gradient(135deg,#06233f,#0a3a67);
 color:white;
-}
-
-.collab-box{
-max-width:850px;
-margin:auto;
 text-align:center;
 }
 
-.collab-box h2{
+.collab h2{
 font-size:42px;
-text-transform:uppercase;
 margin-bottom:20px;
 }
 
-.collab-box p{
+.collab p{
+max-width:800px;
+margin:auto auto 30px;
+line-height:1.7;
 font-size:20px;
-line-height:1.6;
-margin-bottom:30px;
 }
 
 .badges{
 display:flex;
 justify-content:center;
-flex-wrap:wrap;
 gap:14px;
-margin-bottom:30px;
+flex-wrap:wrap;
+margin-bottom:35px;
 }
 
 .badge{
-border:1px solid rgba(216,177,108,.5);
 padding:12px 18px;
+border:1px solid rgba(255,255,255,.2);
 border-radius:999px;
-color:var(--gold2);
-font-weight:bold;
-}
-
-.map-section{
-text-align:center;
 }
 
 .map{
 width:100%;
-height:400px;
+height:420px;
 border:none;
 border-radius:20px;
 margin-top:30px;
 }
 
 footer{
-background:linear-gradient(135deg,var(--navy3),var(--navy));
+background:#06233f;
 color:white;
-padding:60px 20px 30px;
+padding:70px 20px 30px;
 }
 
 .footer-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 max-width:1200px;
 margin:auto;
+}
+
+.footer-grid h4{
+margin-bottom:20px;
+color:var(--gold);
+}
+
+.footer-grid p,
+.footer-grid a{
+display:block;
+margin-bottom:10px;
+color:#dbe5ef;
 }
 
 .copy{
@@ -369,10 +341,11 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:16px 22px;
+padding:16px 24px;
 border-radius:999px;
 font-weight:bold;
 z-index:9999;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
 @media(max-width:900px){
@@ -399,10 +372,10 @@ display:none;
 
 <header>
 
-<div class="nav">
+<div class="container nav">
 
 <div class="logo">
-CASA<span>MIA</span> SERVICE
+<img src="icon-512.png" alt="CASAMIA Service">
 </div>
 
 <div class="menu">
@@ -414,9 +387,9 @@ CASA<span>MIA</span> SERVICE
 </div>
 
 <a class="cta"
-href="https://wa.me/393489491657?text=CIAO%20CASA%20MIA%20SERVICE,%20VORREI%20AVERE%20PIU%20CLIENTI%20PER%20LA%20MIA%20DITTA%20O%20SOCIETA.%20POSSO%20COLLABORARE%20CON%20VOI"
+href="https://wa.me/393489491657"
 target="_blank">
-Collabora con noi
+WhatsApp
 </a>
 
 </div>
@@ -427,7 +400,9 @@ Collabora con noi
 
 <div class="hero-container">
 
-<div>
+<div class="hero-left">
+
+<img src="icon-512.png" alt="CASAMIA Service">
 
 <h1>
 Ristrutturiamo,<br>
@@ -436,7 +411,7 @@ la tua casa.
 </h1>
 
 <p>
-Un unico interlocutore, tutti i servizi per la tua ristrutturazione.
+Un unico interlocutore per ristrutturazioni, bagni, cucine, impianti e servizi per la tua casa.
 </p>
 
 <div class="buttons">
@@ -472,7 +447,7 @@ Vorrei ricevere un preventivo.
 
 <div class="message">
 <div class="bot">
-Perfetto! Compila il modulo o scrivici su WhatsApp.
+Perfetto! Scrivici su WhatsApp o compila il modulo.
 </div>
 </div>
 
@@ -490,30 +465,34 @@ Perfetto! Compila il modulo o scrivici su WhatsApp.
 I nostri servizi
 </h2>
 
+<p class="section-sub">
+Servizi professionali per ristrutturare e valorizzare la tua casa.
+</p>
+
 <div class="cards">
 
 <div class="card">
 <div class="card-icon">🏠</div>
 <h3>Ristrutturazioni</h3>
-<p>Servizi completi chiavi in mano.</p>
+<p>Lavori completi chiavi in mano.</p>
 </div>
 
 <div class="card">
 <div class="card-icon">🛁</div>
 <h3>Bagni</h3>
-<p>Bagni moderni e personalizzati.</p>
+<p>Bagni moderni e funzionali.</p>
 </div>
 
 <div class="card">
 <div class="card-icon">🍳</div>
 <h3>Cucine</h3>
-<p>Soluzioni eleganti e funzionali.</p>
+<p>Soluzioni eleganti e su misura.</p>
 </div>
 
 <div class="card">
 <div class="card-icon">⚡</div>
 <h3>Impianti</h3>
-<p>Impianti elettrici e idraulici.</p>
+<p>Impianti professionali certificati.</p>
 </div>
 
 </div>
@@ -529,6 +508,10 @@ I nostri servizi
 <h2 class="section-title">
 Richiedi un Preventivo
 </h2>
+
+<p class="section-sub">
+Compila il modulo e verrai ricontattato.
+</p>
 
 <form class="form-box">
 
@@ -546,13 +529,10 @@ Richiedi un Preventivo
 <option>Impianti</option>
 </select>
 
-<textarea
-placeholder="Descrivi il lavoro"
-rows="6">
-</textarea>
+<textarea rows="6" placeholder="Descrivi il lavoro"></textarea>
 
 <a
-href="https://wa.me/393489491657?text=CIAO%20CASA%20MIA%20SERVICE,%20VORREI%20UN%20PREVENTIVO"
+href="https://wa.me/393489491657?text=Salve%20vorrei%20un%20preventivo"
 target="_blank"
 class="cta"
 style="text-align:center;">
@@ -570,26 +550,26 @@ Invia Richiesta
 <div class="container">
 
 <h2 class="section-title">
-Recensioni
+Recensioni Clienti
 </h2>
 
 <div class="cards">
 
 <div class="review-card">
 <div class="stars">★★★★★</div>
-<p>Servizio impeccabile.</p>
+<p>Servizio professionale e puntuale.</p>
 <b>- Marco R.</b>
 </div>
 
 <div class="review-card">
 <div class="stars">★★★★★</div>
-<p>Professionali e veloci.</p>
+<p>Ottima esperienza con il team.</p>
 <b>- Anna P.</b>
 </div>
 
 <div class="review-card">
 <div class="stars">★★★★★</div>
-<p>Ottima esperienza.</p>
+<p>Ristrutturazione perfetta.</p>
 <b>- Luigi C.</b>
 </div>
 
@@ -599,18 +579,16 @@ Recensioni
 
 </section>
 
-<section class="section collab-section" id="collabora">
+<section class="section collab" id="collabora">
 
 <div class="container">
-
-<div class="collab-box">
 
 <h2>
 Collabora con noi
 </h2>
 
 <p>
-Hai una ditta o società? Entra nella rete CASAMIA Service.
+Hai una ditta o società? Entra nella rete CASAMIA Service e ricevi nuove opportunità di lavoro.
 </p>
 
 <div class="badges">
@@ -621,18 +599,16 @@ Hai una ditta o società? Entra nella rete CASAMIA Service.
 </div>
 
 <a class="cta"
-href="https://wa.me/393489491657?text=CIAO%20CASA%20MIA%20SERVICE,%20VORREI%20COLLABORARE"
+href="https://wa.me/393489491657?text=Vorrei%20collaborare%20con%20CASAMIA%20Service"
 target="_blank">
-Contattaci
+Collabora Ora
 </a>
-
-</div>
 
 </div>
 
 </section>
 
-<section class="section map-section">
+<section class="section">
 
 <div class="container">
 
@@ -640,7 +616,7 @@ Contattaci
 Dove siamo
 </h2>
 
-<p>
+<p style="text-align:center;">
 Corso Garibaldi 388, Napoli 80142
 </p>
 
@@ -680,12 +656,10 @@ src="https://www.google.com/maps?q=Corso+Garibaldi+388+Napoli+80142&output=embed
 
 <a
 class="whatsapp"
-href="https://wa.me/393489491657?text=CIAO%20CASA%20MIA%20SERVICE,%20VORREI%20UN%20PREVENTIVO"
+href="https://wa.me/393489491657"
 target="_blank">
 WhatsApp
 </a>
-
-<!-- SERVICE WORKER -->
 
 <script>
 
@@ -693,19 +667,7 @@ if ("serviceWorker" in navigator) {
 
 window.addEventListener("load", function () {
 
-navigator.serviceWorker.register("/service-worker.js")
-
-.then(function () {
-
-console.log("CASAMIA PWA ATTIVA");
-
-})
-
-.catch(function (error) {
-
-console.log("Errore:", error);
-
-});
+navigator.serviceWorker.register("/service-worker.js");
 
 });
 
