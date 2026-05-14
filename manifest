@@ -7,7 +7,7 @@
   "display": "standalone",
   "background_color": "#06233f",
   "theme_color": "#06233f",
-  "orientation": "portrait-primary",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "https://dummyimage.com/192x192/06233f/d8b16c.png&text=CMS",
