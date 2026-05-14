@@ -20,10 +20,11 @@
 
 :root{
 --navy:#06233f;
+--navy2:#0a3a67;
 --gold:#d4a64a;
 --light:#ffffff;
 --text:#10233d;
---shadow:0 15px 40px rgba(0,0,0,.1);
+--shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
 *{
@@ -38,8 +39,8 @@ scroll-behavior:smooth;
 
 body{
 font-family:Arial,Helvetica,sans-serif;
-background:#fff;
-color:var(--text);
+background:#06233f;
+color:white;
 }
 
 a{
@@ -53,12 +54,12 @@ padding:0 20px;
 }
 
 header{
-background:#fff;
+background:#06233f;
 padding:20px 0;
 position:sticky;
 top:0;
 z-index:999;
-box-shadow:0 2px 20px rgba(0,0,0,.05);
+box-shadow:0 2px 20px rgba(0,0,0,.25);
 }
 
 .nav{
@@ -77,14 +78,14 @@ gap:25px;
 }
 
 .menu a{
-color:var(--navy);
+color:white;
 font-weight:bold;
 font-size:14px;
 }
 
 .cta{
-background:linear-gradient(135deg,var(--navy),#0b3b68);
-color:#fff;
+background:linear-gradient(135deg,var(--gold),#f0c56c);
+color:#06233f;
 padding:14px 22px;
 border-radius:10px;
 font-weight:bold;
@@ -92,7 +93,8 @@ font-weight:bold;
 
 .hero{
 padding:100px 20px;
-background:#fff;
+background:#06233f;
+color:white;
 }
 
 .hero-container{
@@ -112,7 +114,6 @@ margin-bottom:25px;
 .hero h1{
 font-size:60px;
 line-height:1;
-color:var(--navy);
 margin-bottom:25px;
 font-weight:900;
 }
@@ -125,7 +126,7 @@ color:var(--gold);
 font-size:22px;
 line-height:1.6;
 margin-bottom:35px;
-color:#516173;
+color:#dbe5ef;
 }
 
 .buttons{
@@ -142,22 +143,23 @@ display:inline-block;
 }
 
 .btn-primary{
-background:linear-gradient(135deg,var(--navy),#0b3b68);
-color:white;
+background:linear-gradient(135deg,var(--gold),#f0c56c);
+color:#06233f;
 }
 
 .btn-secondary{
-background:#fff;
-border:2px solid var(--navy);
-color:var(--navy);
+background:transparent;
+border:2px solid white;
+color:white;
 }
 
 .chat{
-background:#fff;
+background:white;
 padding:35px;
 border-radius:30px;
 box-shadow:var(--shadow);
-border:1px solid #eee;
+border:1px solid rgba(255,255,255,.1);
+color:#10233d;
 }
 
 .message{
@@ -172,7 +174,7 @@ max-width:80%;
 }
 
 .user{
-background:var(--navy);
+background:#06233f;
 color:white;
 padding:16px 20px;
 border-radius:18px;
@@ -188,7 +190,7 @@ padding:90px 20px;
 font-size:42px;
 text-align:center;
 margin-bottom:20px;
-color:var(--navy);
+color:white;
 }
 
 .section-sub{
@@ -196,7 +198,7 @@ text-align:center;
 max-width:700px;
 margin:auto auto 50px;
 line-height:1.7;
-color:#617184;
+color:#dbe5ef;
 }
 
 .cards{
@@ -206,12 +208,12 @@ gap:25px;
 }
 
 .card{
-background:#fff;
+background:white;
 padding:35px;
 border-radius:24px;
 box-shadow:var(--shadow);
 text-align:center;
-border:1px solid #eee;
+color:#10233d;
 }
 
 .card-icon{
@@ -221,11 +223,11 @@ margin-bottom:20px;
 
 .card h3{
 margin-bottom:12px;
-color:var(--navy);
+color:#06233f;
 }
 
 .form-section{
-background:#f8f9fb;
+background:#0a3a67;
 }
 
 .form-box{
@@ -241,19 +243,20 @@ gap:20px;
 .form-box textarea{
 padding:18px;
 border-radius:12px;
-border:1px solid #ddd;
+border:none;
 font-size:16px;
 }
 
 .reviews{
-background:#fff;
+background:#06233f;
 }
 
 .review-card{
-background:#fff;
+background:white;
 padding:30px;
 border-radius:20px;
 box-shadow:var(--shadow);
+color:#10233d;
 }
 
 .stars{
@@ -263,7 +266,7 @@ margin-bottom:15px;
 }
 
 .collab{
-background:linear-gradient(135deg,#06233f,#0a3a67);
+background:linear-gradient(135deg,#04182c,#0a3a67);
 color:white;
 text-align:center;
 }
@@ -278,6 +281,7 @@ max-width:800px;
 margin:auto auto 30px;
 line-height:1.7;
 font-size:20px;
+color:#dbe5ef;
 }
 
 .badges{
@@ -292,6 +296,7 @@ margin-bottom:35px;
 padding:12px 18px;
 border:1px solid rgba(255,255,255,.2);
 border-radius:999px;
+color:#f0c56c;
 }
 
 .map{
@@ -303,7 +308,7 @@ margin-top:30px;
 }
 
 footer{
-background:#06233f;
+background:#04182c;
 color:white;
 padding:70px 20px 30px;
 }
@@ -616,7 +621,7 @@ Collabora Ora
 Dove siamo
 </h2>
 
-<p style="text-align:center;">
+<p style="text-align:center;color:#dbe5ef;">
 Corso Garibaldi 388, Napoli 80142
 </p>
 
