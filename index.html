@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>CASAMIA Service</title>
+
+<meta name="description" content="CASAMIA Service - Ristrutturiamo, valorizziamo la tua casa.">
+
+<!-- PWA / APP -->
+
+<link rel="manifest" href="/manifest.json">
+
+<meta name="theme-color" content="#06233f">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="apple-mobile-web-app-title" content="CASAMIA">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="application-name" content="CASAMIA Service">
+
+<meta name="format-detection" content="telephone=no">
 
 <style>
 
@@ -226,48 +248,6 @@ font-size:42px;
 color:var(--gold);
 }
 
-.about-section{
-background:#fff;
-}
-
-.about-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:35px;
-align-items:center;
-}
-
-.about-box{
-background:white;
-border-radius:24px;
-padding:35px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-border:1px solid #eee;
-}
-
-.about-box h3{
-font-size:28px;
-color:var(--navy);
-margin-bottom:18px;
-}
-
-.about-box p{
-color:var(--muted);
-line-height:1.7;
-margin-bottom:15px;
-}
-
-.about-image{
-min-height:360px;
-border-radius:26px;
-background:
-linear-gradient(rgba(6,35,63,.25),rgba(6,35,63,.25)),
-url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80');
-background-size:cover;
-background-position:center;
-box-shadow:var(--shadow);
-}
-
 .form-section{
 background:#f8f8f8;
 }
@@ -290,10 +270,6 @@ font-size:16px;
 font-family:Arial,Helvetica,sans-serif;
 }
 
-.form-box textarea{
-resize:none;
-}
-
 .reviews{
 background:#f8f8f8;
 }
@@ -309,12 +285,6 @@ box-shadow:0 10px 30px rgba(0,0,0,.08);
 font-size:24px;
 color:var(--gold);
 margin-bottom:15px;
-}
-
-.review-card p{
-line-height:1.6;
-margin-bottom:15px;
-color:var(--muted);
 }
 
 .collab-section{
@@ -341,7 +311,6 @@ margin-bottom:20px;
 .collab-box p{
 font-size:20px;
 line-height:1.6;
-color:#e5edf5;
 margin-bottom:30px;
 }
 
@@ -371,7 +340,6 @@ height:400px;
 border:none;
 border-radius:20px;
 margin-top:30px;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
 }
 
 footer{
@@ -388,25 +356,11 @@ max-width:1200px;
 margin:auto;
 }
 
-.footer-grid h4{
-margin-bottom:20px;
-color:var(--gold2);
-}
-
-.footer-grid p,
-.footer-grid a{
-color:#d8e1ec;
-margin-bottom:10px;
-display:block;
-line-height:1.6;
-}
-
 .copy{
 text-align:center;
 margin-top:40px;
 padding-top:20px;
 border-top:1px solid rgba(255,255,255,.1);
-color:#d8e1ec;
 }
 
 .whatsapp{
@@ -418,17 +372,12 @@ color:white;
 padding:16px 22px;
 border-radius:999px;
 font-weight:bold;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
 z-index:9999;
 }
 
 @media(max-width:900px){
 
 .hero-container{
-grid-template-columns:1fr;
-}
-
-.about-grid{
 grid-template-columns:1fr;
 }
 
@@ -443,6 +392,7 @@ display:none;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -459,7 +409,6 @@ CASA<span>MIA</span> SERVICE
 <a href="#">Home</a>
 <a href="#servizi">Servizi</a>
 <a href="#preventivo">Preventivo</a>
-<a href="#chi-siamo">Chi siamo</a>
 <a href="#collabora">Collabora</a>
 <a href="#contatti">Contatti</a>
 </div>
@@ -498,9 +447,9 @@ Richiedi Preventivo
 </a>
 
 <a class="btn btn-secondary"
-href="https://wa.me/393489491657?text=CIAO%20CASA%20MIA%20SERVICE,%20VORREI%20AVERE%20PIU%20CLIENTI%20PER%20LA%20MIA%20DITTA%20O%20SOCIETA.%20POSSO%20COLLABORARE%20CON%20VOI"
+href="https://wa.me/393489491657"
 target="_blank">
-Collabora con noi
+WhatsApp Business
 </a>
 
 </div>
@@ -511,19 +460,19 @@ Collabora con noi
 
 <div class="message">
 <div class="bot">
-Ciao 👋 Benvenuto in CASAMIA Service. Come possiamo aiutarti?
+Ciao 👋 Benvenuto in CASAMIA Service.
 </div>
 </div>
 
 <div class="message">
 <div class="user">
-Vorrei ristrutturare il bagno.
+Vorrei ricevere un preventivo.
 </div>
 </div>
 
 <div class="message">
 <div class="bot">
-Perfetto! Compila il modulo o scrivici su WhatsApp per ricevere un preventivo.
+Perfetto! Compila il modulo o scrivici su WhatsApp.
 </div>
 </div>
 
@@ -541,16 +490,12 @@ Perfetto! Compila il modulo o scrivici su WhatsApp per ricevere un preventivo.
 I nostri servizi
 </h2>
 
-<p class="section-sub">
-Tutti i servizi per valorizzare e ristrutturare la tua casa.
-</p>
-
 <div class="cards">
 
 <div class="card">
 <div class="card-icon">🏠</div>
 <h3>Ristrutturazioni</h3>
-<p>Ristrutturazioni complete chiavi in mano.</p>
+<p>Servizi completi chiavi in mano.</p>
 </div>
 
 <div class="card">
@@ -562,25 +507,13 @@ Tutti i servizi per valorizzare e ristrutturare la tua casa.
 <div class="card">
 <div class="card-icon">🍳</div>
 <h3>Cucine</h3>
-<p>Soluzioni cucina eleganti e funzionali.</p>
+<p>Soluzioni eleganti e funzionali.</p>
 </div>
 
 <div class="card">
 <div class="card-icon">⚡</div>
 <h3>Impianti</h3>
-<p>Impianti elettrici e idraulici professionali.</p>
-</div>
-
-<div class="card">
-<div class="card-icon">🧱</div>
-<h3>Pavimenti</h3>
-<p>Pavimenti e rivestimenti di qualità.</p>
-</div>
-
-<div class="card">
-<div class="card-icon">🎨</div>
-<h3>Tinteggiatura</h3>
-<p>Pittura interna ed esterna professionale.</p>
+<p>Impianti elettrici e idraulici.</p>
 </div>
 
 </div>
@@ -597,14 +530,12 @@ Tutti i servizi per valorizzare e ristrutturare la tua casa.
 Richiedi un Preventivo
 </h2>
 
-<p class="section-sub">
-Compila il modulo e verrai ricontattato dal nostro team.
-</p>
-
 <form class="form-box">
 
 <input type="text" placeholder="Nome e Cognome">
+
 <input type="tel" placeholder="Telefono">
+
 <input type="text" placeholder="Città">
 
 <select>
@@ -613,12 +544,10 @@ Compila il modulo e verrai ricontattato dal nostro team.
 <option>Bagno</option>
 <option>Cucina</option>
 <option>Impianti</option>
-<option>Pavimenti</option>
-<option>Tinteggiatura</option>
 </select>
 
 <textarea
-placeholder="Descrivi il lavoro da effettuare"
+placeholder="Descrivi il lavoro"
 rows="6">
 </textarea>
 
@@ -626,7 +555,7 @@ rows="6">
 href="https://wa.me/393489491657?text=CIAO%20CASA%20MIA%20SERVICE,%20VORREI%20UN%20PREVENTIVO"
 target="_blank"
 class="cta"
-style="text-align:center;width:100%;">
+style="text-align:center;">
 Invia Richiesta
 </a>
 
@@ -636,85 +565,31 @@ Invia Richiesta
 
 </section>
 
-<section class="section about-section" id="chi-siamo">
+<section class="section reviews">
 
 <div class="container">
 
 <h2 class="section-title">
-Chi siamo
+Recensioni
 </h2>
-
-<p class="section-sub">
-CASAMIA Service nasce per offrire un unico punto di riferimento per ristrutturazioni, manutenzioni e lavori per la casa.
-</p>
-
-<div class="about-grid">
-
-<div class="about-box">
-
-<h3>
-Un solo referente per tutti i lavori
-</h3>
-
-<p>
-Seguiamo il cliente dalla prima richiesta fino alla conclusione del lavoro, coordinando professionisti, materiali e tempistiche.
-</p>
-
-<p>
-Il nostro obiettivo è rendere semplice ciò che spesso è complicato: trovare persone affidabili, ricevere un preventivo chiaro e portare a termine il lavoro con qualità.
-</p>
-
-<a class="cta"
-href="https://wa.me/393489491657"
-target="_blank">
-Parla con noi
-</a>
-
-</div>
-
-<div class="about-image"></div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section reviews" id="recensioni">
-
-<div class="container">
-
-<h2 class="section-title">
-Cosa dicono i clienti
-</h2>
-
-<p class="section-sub">
-La soddisfazione dei clienti è la nostra priorità.
-</p>
 
 <div class="cards">
 
 <div class="review-card">
 <div class="stars">★★★★★</div>
-<p>
-Servizio impeccabile e professionale.
-</p>
+<p>Servizio impeccabile.</p>
 <b>- Marco R.</b>
 </div>
 
 <div class="review-card">
 <div class="stars">★★★★★</div>
-<p>
-Ristrutturazione bagno perfetta.
-</p>
+<p>Professionali e veloci.</p>
 <b>- Anna P.</b>
 </div>
 
 <div class="review-card">
 <div class="stars">★★★★★</div>
-<p>
-Veloci, seri e organizzati.
-</p>
+<p>Ottima esperienza.</p>
 <b>- Luigi C.</b>
 </div>
 
@@ -731,26 +606,24 @@ Veloci, seri e organizzati.
 <div class="collab-box">
 
 <h2>
-Hai una ditta o società?
+Collabora con noi
 </h2>
 
 <p>
-Collabora con CASAMIA Service e ricevi nuove opportunità di lavoro. Cerchiamo professionisti e aziende nel settore casa, ristrutturazioni e manutenzioni.
+Hai una ditta o società? Entra nella rete CASAMIA Service.
 </p>
 
 <div class="badges">
 <span class="badge">Ristrutturazioni</span>
-<span class="badge">Impianti</span>
 <span class="badge">Bagni</span>
-<span class="badge">Cucine</span>
+<span class="badge">Impianti</span>
 <span class="badge">Pavimenti</span>
-<span class="badge">Tinteggiature</span>
 </div>
 
 <a class="cta"
-href="https://wa.me/393489491657?text=CIAO%20CASA%20MIA%20SERVICE,%20VORREI%20AVERE%20PIU%20CLIENTI%20PER%20LA%20MIA%20DITTA%20O%20SOCIETA.%20POSSO%20COLLABORARE%20CON%20VOI"
+href="https://wa.me/393489491657?text=CIAO%20CASA%20MIA%20SERVICE,%20VORREI%20COLLABORARE"
 target="_blank">
-Collabora con noi
+Contattaci
 </a>
 
 </div>
@@ -786,26 +659,15 @@ src="https://www.google.com/maps?q=Corso+Garibaldi+388+Napoli+80142&output=embed
 
 <div>
 <h4>CASAMIA Service</h4>
-<p>
-Ristrutturiamo, valorizziamo la tua casa.
-</p>
+<p>Ristrutturiamo, valorizziamo la tua casa.</p>
 </div>
 
 <div>
 <h4>Contatti</h4>
 <p>☎ 3489491657</p>
 <p>✉ casamiasrl2024@gmail.com</p>
-<p>📍 Corso Garibaldi 388, Napoli 80142</p>
+<p>📍 Corso Garibaldi 388, Napoli</p>
 <p>P.IVA 10344461214</p>
-</div>
-
-<div>
-<h4>Link utili</h4>
-<a href="#">Home</a>
-<a href="#servizi">Servizi</a>
-<a href="#preventivo">Preventivo</a>
-<a href="#chi-siamo">Chi siamo</a>
-<a href="#collabora">Collabora</a>
 </div>
 
 </div>
@@ -822,6 +684,34 @@ href="https://wa.me/393489491657?text=CIAO%20CASA%20MIA%20SERVICE,%20VORREI%20UN
 target="_blank">
 WhatsApp
 </a>
+
+<!-- SERVICE WORKER -->
+
+<script>
+
+if ("serviceWorker" in navigator) {
+
+window.addEventListener("load", function () {
+
+navigator.serviceWorker.register("/service-worker.js")
+
+.then(function () {
+
+console.log("CASAMIA PWA ATTIVA");
+
+})
+
+.catch(function (error) {
+
+console.log("Errore:", error);
+
+});
+
+});
+
+}
+
+</script>
 
 </body>
 </html>
